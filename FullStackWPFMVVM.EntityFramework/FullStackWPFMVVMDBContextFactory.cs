@@ -6,9 +6,9 @@ using System.Text;
 
 namespace FullStackWPFMVVM.EntityFramework
 {
-    public class FullStackWPFMVVMDBContextOptionsFactory : IDesignTimeDbContextFactory<FullStackWPFMVVMDBContext>
+    public class FullStackWPFMVVMDBContextFactory : IDesignTimeDbContextFactory<FullStackWPFMVVMDBContext>
     {
-        public FullStackWPFMVVMDBContext CreateDbContext(string[] args)
+        public FullStackWPFMVVMDBContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<FullStackWPFMVVMDBContext>();
             options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FullStackWPFMVVMDB;Trusted_Connection=True;");
